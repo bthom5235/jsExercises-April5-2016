@@ -1,3 +1,4 @@
+
 /**************************************/
 /*  Level Two - Conditional Exercises */
 /**************************************/
@@ -10,7 +11,12 @@
     isHot(32) => false
 */
 function isHot(degrees) {
-
+  if (degrees >72){
+    return true;
+ }
+ else{
+   return false;
+ }
 }
 
 /*
@@ -22,7 +28,12 @@ function isHot(degrees) {
     sayHotMessage(32) => "It is cold today"
 */
 function sayHotMessage(degrees) {
-
+if (isHot(degrees)){
+  return("It is hot today");
+ }
+ else{
+ return("It is cold today");
+ }
 }
 
 /*
@@ -35,8 +46,36 @@ function sayHotMessage(degrees) {
     isHotAdv(33) => "just right"
     isHotAdv(32) => "cold"
 */
+  function sayHotMessage(degrees) {
+ if (isHot(degrees)) {
+   return "It is hot today";
+ }
+   else{
+     return "It is cold today";
+     
+   }
+ }
+
+/*
+  Return the string "hot" if degrees is greater than 72
+  Return the string "just right" if degrees is between 32 and 72
+  Return the string "cold" if degrees is less than 32
+  ie:
+    isHotAdv(73) => "hot"
+    isHotAdv(72) => "just right"
+    isHotAdv(33) => "just right"
+    isHotAdv(32) => "cold"
+*/
 function isHotAdv(degrees) {
-  
+   if (degrees > 72) {
+   return "hot";
+ }
+   else if (degrees > 32 && degrees <= 72) {
+     return "just right";
+   }
+  else {
+        return "cold";
+  }
 }
 
 /*
@@ -49,5 +88,15 @@ function isHotAdv(degrees) {
     sayHotMessageAdv(32) => "It is cold today at 32 degrees"
 */
 function sayHotMessageAdv(degrees) {
-
+  isHotAdv(degrees);
+     if (degrees > 72) {
+   return "It is hot today at " + degrees+" degrees";
+ }
+   else if (degrees > 32 && degrees <= 72) {
+     return "It is just right today at " + degrees+" degrees";
+   }
+  else {
+       return "It is cold today at " + degrees+" degrees";
+  }
+ 
 }
